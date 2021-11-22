@@ -10,7 +10,7 @@ export const List = ({users, list}) => {
     </thead>
     <tbody>
     {
-      list.map(item => <tr key={item}>
+      list.map(item => <tr key={item.id}>
         <td>{item.name}</td>
         <td>{users.find(user => user.id === item.personId)?.name}</td>
       </tr>)
