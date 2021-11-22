@@ -4,8 +4,8 @@ export const List = ({users, list}) => {
   return (<table>
     <thead>
       <tr>
-        <th>负责人</th>
         <th>名称</th>
+        <th>负责人</th>
       </tr>
     </thead>
     <tbody>
