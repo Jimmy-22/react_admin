@@ -5,17 +5,16 @@ import {useEffect, useState} from "react";
 import {cleanObject, useMount, useDebounce} from '../../utils/'
 import * as qs from 'qs'
 
-//yarn add qs
 const url = process.env.REACT_APP_API_URL
+
 export const ProjectListScreen = () => {
   const [users, setUsers] = useState([])
   const [param, setParam] = useState({
     name: '',
     personId: ''
-
   })
 
-  const debounceParam = useDebounce(param, 2000)
+  const debounceParam = useDebounce(param, 200)
   const [list, setList] = useState([])
 
   useEffect(() => {
