@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 
-export const isFalsy = (value: any) => value === 0 ? false : !value
+export const isFalsy = (value: unknown) => value === 0 ? false : !value
 
 //函数里改变传入的对象不太好
 export const cleanObject = (object: object) => {
@@ -22,7 +22,7 @@ export const useMount = (callback: () => void) => {
   }, [])
 }
 
-export const useDebounce = (value: any, delay?: number) => {
+export const useDebounce = <V>(value: V, delay?: number) => {
   const [debounceValue, setDebounceValue] = useState(value)
   useEffect(() => {
     //每次在value变化后，设置一个定时器
